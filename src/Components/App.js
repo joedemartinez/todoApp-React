@@ -17,6 +17,16 @@ function App() {
     settodoLists([...todoLists, todoList])
   }
 
+  //delete btn function
+  const deltodoList = (id) => {
+    const newList = todoLists.filter((todoList) => {
+      return todoList.id !== id
+    })
+
+    //update list
+    settodoLists(newList)
+  }
+
   
   //useEffect retrieving must always come before storing function  
   //retriving data from local storage
@@ -40,7 +50,7 @@ function App() {
         <TodoListForm getInputsData={getInputsData}/>
       </div>
       <div className="col-lg-6 col-md-6">
-        <TodoLists todoLists={todoLists}/>
+        <TodoLists todoLists={todoLists} deltodoList={deltodoList}/>
       </div>
       </div>
     </div>

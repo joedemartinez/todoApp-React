@@ -4,6 +4,7 @@ class TodoListForm extends React.Component{
 
     //Creating a state
     state = {
+        id: "",
         title: "",
         notes: ""
     }
@@ -21,7 +22,11 @@ class TodoListForm extends React.Component{
         this.props.getInputsData(this.state)
 
         //clear title and notes input after clicking add button
-        this.setState({title: "", notes: ""})
+        this.setState({id: "", title: "", notes: ""})
+    }
+
+    genID = () => {
+        return "#"+Math.floor(Math.random() * 500)
     }
 
     render() {
@@ -35,9 +40,10 @@ class TodoListForm extends React.Component{
                         <input className="form-control" 
                         type="text" 
                         placeholder="Title" 
-                        name="title" autoFocus autoComplete="false" required
+                        name="title" autoFocus autoComplete="off" required
                         value={this.state.title}
-                        onChange={ (e) => this.setState({title: e.target.value})}/>
+                        //trying to generate an id
+                        onChange={ (e) => this.setState({id: this.genID(), title: e.target.value})}/>
                     </div>
                     <div className="form-group">
                         <label className="control-label">Note</label>
