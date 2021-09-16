@@ -25,6 +25,8 @@ class TodoListForm extends React.Component{
         this.setState({id: "", title: "", notes: ""})
     }
 
+    
+    //trying to generate an id - just testing purpose 
     genID = () => {
         return "#"+Math.floor(Math.random() * 500)
     }
@@ -42,7 +44,6 @@ class TodoListForm extends React.Component{
                         placeholder="Title" 
                         name="title" autoFocus autoComplete="off" required
                         value={this.state.title}
-                        //trying to generate an id
                         onChange={ (e) => this.setState({id: this.genID(), title: e.target.value})}/>
                     </div>
                     <div className="form-group">
