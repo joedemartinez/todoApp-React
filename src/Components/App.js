@@ -35,8 +35,14 @@ function App() {
   return (
     <div className="container-fluid">
       <Header/>
-      <ContactForm getInputsData={getInputsData}/>
-      <ContactList todoLists={todoLists}/>
+      <div className="col-lg-12 col-md-12 row">
+      <div className="col-lg-6 col-md-6">
+        <ContactForm getInputsData={getInputsData}/>
+      </div>
+      <div className="col-lg-6 col-md-6">
+        <ContactList todoLists={todoLists}/>
+      </div>
+      </div>
     </div>
   );
 }

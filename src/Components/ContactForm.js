@@ -27,7 +27,7 @@ class ContactForm extends React.Component{
     render() {
         return (
             //TodoList form
-            <div className="container">
+            <div>
                 <h2 className="text-center">To-Do List Form</h2>
                 <form className="form-horinzontal" onSubmit={this.formSubmit}>
                     <div className="form-group">
