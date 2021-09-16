@@ -1,6 +1,6 @@
 import React from "react";
 
-const ContactList = (props) => {
+const TodoLists = (props) => {
     //array map to print out individual items
     const todoLists = props.todoLists.map((todoList, pos) => {
         return (
@@ -15,7 +15,7 @@ const ContactList = (props) => {
 
     return (
         <div>
-            <h2 className="text-center">Contact Lists</h2>
+            <h2 className="text-center">To-Do Lists</h2>
             <div style={{textAlign: "justify"}}>
                 {todoLists}
             </div>
@@ -23,4 +23,4 @@ const ContactList = (props) => {
     )
 }
 
-export default ContactList
+export default TodoLists

@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react';
 //importing components
 import Header from './Header';
-import ContactForm from './ContactForm';
-import ContactList from './ContactList';
+import TodoListForm from './TodoListForm';
+import TodoLists from './TodoLists';
 
 function App() {
   //localstoragekey
@@ -37,10 +37,10 @@ function App() {
       <Header/>
       <div className="col-lg-12 col-md-12 row">
       <div className="col-lg-6 col-md-6">
-        <ContactForm getInputsData={getInputsData}/>
+        <TodoListForm getInputsData={getInputsData}/>
       </div>
       <div className="col-lg-6 col-md-6">
-        <ContactList todoLists={todoLists}/>
+        <TodoLists todoLists={todoLists}/>
       </div>
       </div>
     </div>

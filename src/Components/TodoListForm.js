@@ -1,6 +1,6 @@
 import React from 'react';
 
-class ContactForm extends React.Component{
+class TodoListForm extends React.Component{
 
     //Creating a state
     state = {
@@ -28,14 +28,14 @@ class ContactForm extends React.Component{
         return (
             //TodoList form
             <div>
-                <h2 className="text-center">To-Do List Form</h2>
+                <h2 className="text-center">New Todo List</h2>
                 <form className="form-horinzontal" onSubmit={this.formSubmit}>
                     <div className="form-group">
                         <label className="control-label">Title</label>
                         <input className="form-control" 
                         type="text" 
                         placeholder="Title" 
-                        name="title" autoFocus required
+                        name="title" autoFocus autoComplete="false" required
                         value={this.state.title}
                         onChange={ (e) => this.setState({title: e.target.value})}/>
                     </div>
@@ -54,4 +54,4 @@ class ContactForm extends React.Component{
     }
 }
 
-export default ContactForm;
+export default TodoListForm;
